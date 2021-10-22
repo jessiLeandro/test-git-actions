@@ -5,6 +5,10 @@ describe('Test operation', () => {
       expect(sum(1,1)).toBe(2)
     }) 
 
+    it('should not be able sum a number and undefined', () => {
+      expect(sum(1)).not.toBe(2)
+    }) 
+
     it('should be able multiply two numbers', () => {
       expect(multiply(1,1)).toBe(1)
     })
