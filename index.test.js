@@ -13,11 +13,6 @@ describe('Test operation', () => {
       expect(multiply(1,1)).toBe(1)
     })
 
-    it('forcing error', () => {
-      expect(multiply(1,1)).toBe(2)
-    })
-
-
      it('should not be able multiply a number and undefined', () => {
       expect(sum(1)).not.toBe(2)
     }) 
