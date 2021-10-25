@@ -1,4 +1,4 @@
-const { sum, multiply } = require('.')
+const { sum, multiply, createUser } = require('.')
 
 describe('Test operation', () => {
     it('should be able sum two numbers', () => {
@@ -16,5 +16,17 @@ describe('Test operation', () => {
      it('should not be able multiply a number and undefined', () => {
       expect(sum(1)).not.toBe(2)
     }) 
+
+});
+
+describe('connection db', () => {
+  
+  it('craate user',  async () => {
+
+    const user = await createUser()
+
+    expect(user).toHaveProperty('name', 'jessi')
+  });
+  
 
 });
