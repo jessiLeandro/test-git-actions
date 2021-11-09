@@ -6,11 +6,16 @@ on:
       - master
 
 jobs:
-  build:
+  run-test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
       run: yarn
+    - uses: harmon758/postgresql-action@v1
+      with:
+        postgresql db: 'database_test'
+        postgresql user: 'postgres'
+        postgresql password: 'password'
     - name: Run tests
       run: yarn test
