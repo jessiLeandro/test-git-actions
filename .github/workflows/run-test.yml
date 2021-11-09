@@ -17,8 +17,5 @@ jobs:
         postgresql db: 'database_test'
         postgresql user: 'postgres'
         postgresql password: 'password'
-
-    # - name: Start container
-    #   run: docker-compose up
     - name: Run tests
       run: yarn test
